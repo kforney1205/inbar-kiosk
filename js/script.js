@@ -2,10 +2,9 @@ function handlePlatformChange() {
   const platformType = document.getElementById('platformType').value;
   const passwordContainer = document.getElementById('passwordContainer');
   const pinContainer = document.getElementById('pinContainer');
-  let platformURL = '';
 
   // Reset input fields
-   document.getElementById('ifPassword').value = '';
+  document.getElementById('ifPassword').value = '';
   document.getElementById('ifPin').value = '';
 
   if (platformType === 'zoom' || platformType === 'webex') {
@@ -54,10 +53,17 @@ function handleSubmit() {
   const sessionID = document.getElementById('sessionID').value;
   const ifPassword = document.getElementById('ifPassword').value;
   const ifPin = document.getElementById('ifPin').value;
+  const userName = document.getElementById('userName').value.trim(); // Capture and trim any leading/trailing spaces
 
   // Validate session ID
   if (!validateSessionID(platformType, sessionID)) {
     alert('Please enter a valid Session ID for the selected platform.');
+    return false;
+  }
+
+  // Validate that userName is not empty (it is required)
+  if (!userName) {
+    alert('Please enter your display name.');
     return false;
   }
 
@@ -91,7 +97,10 @@ function handleSubmit() {
     url += `&pin=${ifPin}`;
   }
 
-  url += `@${platformDomain}`;
+   url += `@${platformDomain}`;
+
+  // Append Display Name (URL encode to handle spaces and special characters)
+  url += `&name=${encodeURIComponent(userName)}`;
 
   // Navigate to the constructed URL
   window.location.href = url;

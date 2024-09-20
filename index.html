@@ -22,6 +22,12 @@
               <h5>Enter your details to start your session</h5>
 
               <form id="kioskForm" class="signup-form" onsubmit="return handleSubmit()">
+                
+                <!-- Display Name Input (Required) -->
+                <p>Enter Display Name</p>
+                <input name="userName" id="userName" class="form-input" type="text" placeholder="Display Name" required /> <br>
+
+                <!-- Platform Type Input -->
                 <p>Select Platform</p>
                 <select name="platformType" id="platformType" class="form-input" onchange="handlePlatformChange()" required>
                   <option value=""> -- Select Platform -- </option>
@@ -32,19 +38,23 @@
                   <option value="pexip">Pexip</option>
                 </select>
 
+                <!-- Session ID Input -->
                 <p>Enter Meeting ID</p>
                 <input name="sessionID" id="sessionID" class="form-input" type="text" placeholder="Session ID Number" required /> <br>
 
+                <!-- Password Container (Hidden by Default) -->
                 <div id="passwordContainer" class="hidden">
                   <p>Enter Password (if needed)</p>
                   <input name="ifPassword" id="ifPassword" class="form-input" type="text" placeholder="Session Password (optional)" /><br>
                 </div>
 
+                <!-- Pin Container (Hidden by Default) -->
                 <div id="pinContainer" class="hidden">
                   <p>Enter Pin Code</p>
                   <input name="ifPin" id="ifPin" class="form-input" type="text" placeholder="Pin Code" /><br>
                 </div>
 
+                <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary">Start Session</button>
               </form>
             </div>
