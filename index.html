@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Indiana Bar Association SafeKiosk</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Centered logo at the top -->
+    <div class="idxheader">
+      <img src="img/inbar2.png" alt="INBAR Logo">
+    </div>
+
+    <!-- Form container -->
+    <div class="idxparent">
+      <div class="form-body">
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <h3>InBar Kiosk</h3>
+              <h5>Enter your details to start your session</h5>
+
+              <form id="kioskForm" class="signup-form" onsubmit="return handleSubmit()">
+                <p>Select Platform</p>
+                <select name="platformType" id="platformType" class="form-input" onchange="handlePlatformChange()" required>
+                  <option value=""> -- Select Platform -- </option>
+                  <option value="msteams">Microsoft Teams</option>
+                  <option value="zoom">Zoom</option>
+                  <option value="webex">WebEx</option>
+                  <option value="gmeet">Google Meet</option>
+                  <option value="pexip">Pexip</option>
+                </select>
+
+                <p>Enter Meeting ID</p>
+                <input name="sessionID" id="sessionID" class="form-input" type="text" placeholder="Session ID Number" required /> <br>
+
+                <div id="passwordContainer" class="hidden">
+                  <p>Enter Password (if needed)</p>
+                  <input name="ifPassword" id="ifPassword" class="form-input" type="text" placeholder="Session Password (optional)" /><br>
+                </div>
+
+                <div id="pinContainer" class="hidden">
+                  <p>Enter Pin Code</p>
+                  <input name="ifPin" id="ifPin" class="form-input" type="text" placeholder="Pin Code" /><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Start Session</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>

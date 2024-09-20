@@ -1,0 +1,104 @@
+/* Global styles */
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #FFF;
+  background-image: url('../img/flatmosphere-no-star.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Centering the header/logo at the top */
+.idxheader {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.idxheader img {
+  height: 120px;
+}
+
+/* Form container layout */
+.idxparent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  background-color: #1e365c; /* blue background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Space between logo and form */
+}
+
+/* Form holder */
+.form-holder {
+  min-width: 460px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Form content */
+.form-content {
+  width: auto;
+}
+
+.form-items {
+  text-align: center;
+}
+
+/* Headings */
+h3 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+h5 {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Form input fields */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #6C757D;
+  color: #FFF;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  background-color: #495056;
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
